@@ -20,7 +20,17 @@ namespace EntityCodeFirst.Migrations
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            //  to avoid creating duplicate seed data. 
+
+            context.Comentarios.AddOrUpdate(x => x.Id, new Models.Comentario()
+            {
+                Id = 1,
+                Autor = "Virginia",
+                BlogPostId = 1,
+                Contenido = "Hola encantan tus videos"
+
+            });
         }
+
     }
 }

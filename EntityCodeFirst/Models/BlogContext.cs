@@ -17,6 +17,8 @@ namespace EntityCodeFirst.Models
 
         // indicamos el modelo al cual queremos hacer query
 
-        public DbSet<BlogPost> BlogPosts { get; set;}      
+        public DbSet<BlogPost> BlogPosts { get; set;}
+
+        public DbSet <Comentario> Comentarios { get; set; }
     }
 }

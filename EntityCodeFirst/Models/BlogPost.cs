@@ -31,5 +31,7 @@ namespace EntityCodeFirst.Models
         [StringLength(100)]
         public string Publicacion { get; set; }
 
+        public List<Comentario> Comentarios { get; set; }
+
     }
 }
