@@ -22,6 +22,7 @@ namespace EntityCodeFirst.Controllers
         {
             var model = _repo.ObtenerTodos();
 
+            var comentario = model[0].Comentarios[0];
             return View(model);
         }
 
@@ -46,6 +47,7 @@ namespace EntityCodeFirst.Controllers
                 if (ModelState.IsValid)
                 {
                     _repo.Crear(model);
+                   
                     return RedirectToAction("index");
                 }
             }

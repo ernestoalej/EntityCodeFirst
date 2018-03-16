@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using EntityCodeFirst.Models;
+using System.Data.Entity;
 
 namespace EntityCodeFirst.Services
 {
@@ -12,7 +13,7 @@ namespace EntityCodeFirst.Services
         {
             using (var db = new BlogContext())
             {
-                return db.BlogPosts.ToList();               
+                return db.BlogPosts.Include(x=> x.Comentarios).ToList();               
             }
         }
 
